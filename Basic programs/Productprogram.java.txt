@@ -1,0 +1,39 @@
+class Productprogram{
+	public static void main(String args[]){
+		String carmodel="Fortuner";
+                double price =337800;
+		byte star=5;
+		Boolean automatic=true;
+		int powerbhp=201;
+                long milage=10000;
+		char fueltype='G';
+		float taxpercentage=0.08f;
+		int discountpercentage=5;
+                int discount = (int)(discountpercentage/price*100);
+		double tax=taxpercentae/price*100;
+		double registrationfee =5000;
+                long vipnumber=10000;
+                String carnumber="AP168888";
+                int totalprice=(int)(price-discount+tax+vipnumber+registrationfee);
+		System.out.println("Car Model is : "+carmodel);
+		System.out.println("Car Price : "+price);
+		System.out.println("Automatic : "+automatic);
+		System.out.println("Power(Bhp) : "+powerbhp);
+		System.out.println("Milage : "+milage);
+		System.out.println("Fueltype : "+fuletype);
+		System.out.println("Tax  : "+taxpercentage+"%");
+		System.out.println("Discount : "+discountpercentage+"%");
+		System.out.println("Discount Price : "+(int)(price-discount));
+		System.out.println("Tax : "+tax);
+		System.out.println("Registration fee : "+registrationfee);
+		System.out.println("Vipnumber plate price : "+vipnumber);
+		System.out.println("Number Plate : "+carnumber);
+                String p="Gpay";
+                System.out.println("Payment method"+p);
+                if(p=="Gpay"){
+			totalprice=(totalprice-(5/totalprice*100));
+		}
+		System.out.println("Gpay discount price : "+(5/totalprice*100));
+		System.out.println("Total Amount : "+totalprice);
+	}
+}
