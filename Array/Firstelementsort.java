@@ -55,6 +55,26 @@ class Firstelementsort
 		}
 		return arr;
 	}
+	public static int[] firstelementlargesecondelementsmall(int arr[])
+	{
+		int max=0,min=arr.length-1;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]>arr[max])
+			{
+				int temp=arr[i];
+				arr[i]=arr[max];
+				arr[max]=temp;
+			}
+			else if(arr[i]<arr[min])
+			{
+				int temp=arr[i];
+				arr[i]=arr[min];
+				arr[min]=temp;
+			}
+		}
+		return arr;
+	}
 	public static void main(String args[])
 	{
 		Scanner sc = new Scanner(System.in);
@@ -68,7 +88,7 @@ class Firstelementsort
 		}
 		System.out.print("A array is : ");
 		printArray(arr);
-		int b[]=firstelementlarge(arr);
+		/*int b[]=firstelementlarge(arr);
 		System.out.print("First element largest array is : ");
 		printArray(b);
 		int d[]=lastelementsmall(arr);
@@ -76,6 +96,9 @@ class Firstelementsort
 		printArray(d);
 		int c[]=bubblesort(arr);
 		System.out.print("Sorted array is : ");
+		printArray(c);*/
+		int c[]=firstelementlargesecondelementsmall(arr);
 		printArray(c);
+	
 	}
 }

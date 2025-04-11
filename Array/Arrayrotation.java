@@ -1,5 +1,5 @@
 import java.util.*;
-class Kthlargest
+class Arrayrotation
 {
 	public static void printArray(int arr[])
 	{
@@ -9,24 +9,14 @@ class Kthlargest
 		}
 		System.out.println();
 	}
-	public static int kthLargest(int arr[],int k,int prevmaxi)
+	public static void onerotation(int arr[])
 	{
-		if(k==0)
+		int a=arr[0];
+		for(int i=1;i<arr.length-1;i++)
 		{
-			return prevmaxi;
+			arr[i]=arr[i+1];
 		}
-                	int maxi=Integer.MIN_VALUE;
-			for(int i=0;i<arr.length;i++)
-			{
-				if (arr[i]>maxi)
-				{
-					maxi=arr[i];
-					prevmaxi=maxi;
-					k--;
-				}
-			}
-			
-		return kthLargest(arr,k,prevmaxi);
+		arr[arr.length-1]=a;
 	}
 	public static void main(String args[])
 	{
@@ -35,13 +25,14 @@ class Kthlargest
 		int n=sc.nextInt();
 		System.out.println("Enter "+n+" elements : ");
 		int arr[]=new int[n];
-		int sum=0;
 		for(int i=0;i<n;i++)
 		{
 			arr[i]=sc.nextInt();
-			sum+=arr[i];
 		}
-		int k=sc.nextInt();
-		System.out.println(kthLargest(arr,k));
+		System.out.print("A array is : ");
+		printArray(arr);
+		onerotation(arr);
+		System.out.println("Array after one rotation");
+		printArray(arr);
 	}
 }
